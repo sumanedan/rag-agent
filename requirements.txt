@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-community
+langchain-google-genai
+langchain-text-splitters
+langchain-core
+langchain-groq
+langgraph
+chromadb==0.5.0
+pypdf
+python-dotenv
+tavily-python
+google-generativeai
+numpy==1.26.4
