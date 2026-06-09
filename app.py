@@ -83,6 +83,7 @@ def calculator(expression: str) -> str:
         return f"Error: {str(e)}"
 
 @st.cache_resource
+@st.cache_resource
 def build_pdf_tool(file_path: str):
     embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
     loader = PyPDFLoader(file_path)
@@ -90,8 +91,8 @@ def build_pdf_tool(file_path: str):
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     chunks = splitter.split_documents(documents)
     vectorstore = Chroma.from_documents(
-        chunks, embeddings,
-        persist_directory="./chroma_db_streamlit"
+        chunks, embeddings
+        # No persist_directory — runs in memory
     )
     retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
     return create_retriever_tool(
