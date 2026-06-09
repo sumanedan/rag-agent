@@ -1,6 +1,6 @@
 streamlit
-langchain
-langchain-community
+langchain==0.3.25
+langchain-community==0.3.23
 langchain-google-genai
 langchain-text-splitters
 langchain-core
@@ -13,3 +13,4 @@ tavily-python
 google-generativeai
 numpy==1.26.4
 grpcio
+zstandard==0.22.0
