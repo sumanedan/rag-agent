@@ -6,9 +6,10 @@ langchain-text-splitters
 langchain-core
 langchain-groq
 langgraph
-chromadb==0.5.0
+chromadb==0.4.24
 pypdf
 python-dotenv
 tavily-python
 google-generativeai
 numpy==1.26.4
+grpcio
